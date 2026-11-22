@@ -7,6 +7,8 @@ Python standard library only. No dependencies, no API key needed for local model
 
 > The prompts are in German, because the test targets German-language SEO work. The scoring is language-independent (JSON structure, counts, lengths, expected values).
 
+Full write-up: [Local AI Models for SEO](https://www.antonioblago.com/blog/local-ai-models-seo-test) (EN) · [Lokale KI-Modelle im SEO-Test](https://www.antonioblago.com/de/blog/lokale-ki-modelle-seo-test) (DE)
+
 ## What it tests
 
 | Category | Tasks | Examples |
