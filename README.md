@@ -21,9 +21,9 @@ All data is fictional (an e-bike brand, a heat pump site). Expected values for t
 
 Each answer gets a score from 0 to 1. Formatting problems (no valid JSON, list wrapped in an object, endless loops) are counted separately, so a model is not punished twice.
 
-## Results (21 November 2026)
+## Results (21 and 22 November 2026)
 
-One run per task, temperature 0. Local models on a cloud VM with one Nvidia Tesla T4 (16 GB VRAM).
+One run per task, temperature 0. Local models on a cloud VM with one Nvidia Tesla T4 (16 GB VRAM). Every prompt, reference answer and check: [METHODOLOGY.md](METHODOLOGY.md).
 
 | Model | Accuracy | Fully correct (of 29) | Median per task | Total |
 |---|---|---|---|---|
@@ -40,21 +40,22 @@ One run per task, temperature 0. Local models on a cloud VM with one Nvidia Tesl
 | qwen2.5:14b (local) | 0.76 | 17 | 3.9 s | 138 s |
 | qwen3:8b (local) | 0.76 | 15 | 3.3 s | 110 s |
 | qwen3:8b, thinking (local) | 0.76 | 20 | 14.8 s | 667 s |
+| qwen3:30b-a3b-instruct, partly offloaded (local) | 0.75 | 15 | 3.7 s | 120 s |
 | qwen2.5:7b (local) | 0.72 | 15 | 2.8 s | 95 s |
 | qwen2.5:1.5b (local) | 0.58 | 9 | 2.5 s | 79 s |
 | qwen2.5:3b (local) | 0.51 | 8 | 2.6 s | 91 s |
 | qwen2.5:0.5b (local) | 0.33 | 3 | 2.3 s | 83 s |
 
-Full numbers incl. per-category scores: [`ergebnisse/gesamt_2026-11-21_neu.md`](ergebnisse/gesamt_2026-11-21_neu.md).
-Every single answer: [`ergebnisse/gesamt_2026-11-21_neu.csv`](ergebnisse/gesamt_2026-11-21_neu.csv) (semicolon-separated).
+Full numbers incl. per-category scores: [`ergebnisse/gesamt_2026-11-22_neu.md`](ergebnisse/gesamt_2026-11-22_neu.md).
+Every single answer: [`ergebnisse/gesamt_2026-11-22_neu.csv`](ergebnisse/gesamt_2026-11-22_neu.csv) (semicolon-separated).
 
 Takeaways:
 - The best local model reaches 0.77, the smallest Claude model 0.98.
-- Locally, size stops helping above 7b: qwen2.5:14b is barely better than 7b and half as fast, the newer qwen3:4b beats both.
+- Locally, size stops helping above 7b: qwen2.5:14b is barely better than 7b and half as fast, the newer qwen3:4b beats both. Even the 30b mixture-of-experts model reaches only 0.75 (best local model for keywords at 0.96, weaker on snippets and technical SEO).
 - Thinking mode raises the number of fully correct answers, but is up to 15 times slower and caused 8 endless loops with qwen3:4b.
 - Local models fail most often at arithmetic (CTR and click deltas), character limits and hreflang edge cases.
 
-Caveats: one run per task, automated scoring with my own expected values, cloud times include network latency. Treat it as a practical comparison, not a scientific leaderboard.
+Caveats: one run per task, automated scoring with my own expected values, cloud times include network latency. Treat it as a practical comparison, not a scientific leaderboard. All scoring decisions and limitations: [METHODOLOGY.md](METHODOLOGY.md).
 
 ## Run it
 
@@ -79,9 +80,13 @@ Each run writes `ergebnisse/<timestamp>.csv` (one row per answer, plus an empty 
 
 Pitfall with Ollama: the tag `qwen3:4b` points to the thinking variant. For answers without thinking use `qwen3:4b-instruct`.
 
+## Reproduce it
+
+Step by step in [METHODOLOGY.md, section "Reproduce it"](METHODOLOGY.md#reproduce-it). Results on other hardware are welcome as an issue.
+
 ## Add your own tasks
 
-Tasks live in [`aufgaben.py`](aufgaben.py): a prompt, a category and a check function that returns a score from 0 to 1. Add a reference answer to `IDEAL` and run `python bench.py --selbsttest`. It makes sure a perfect answer scores 1.0 and nonsense does not.
+Tasks live in [`aufgaben.py`](aufgaben.py): a prompt, a category and a check function that returns a score from 0 to 1. Add a reference answer to `IDEAL` and run `python bench.py --selbsttest`. It makes sure a perfect answer scores 1.0 and nonsense does not. Then run `python methodology.py` to update METHODOLOGY.md.
 
 ## Deutsch
 

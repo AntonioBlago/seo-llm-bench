@@ -62,7 +62,8 @@ def chat_claude(modell, prompt):
 
 def chat_codex(modell, prompt):
     import glob
-    exe = sorted(glob.glob(os.path.expanduser("~/.vscode/extensions/openai.chatgpt-*/bin/windows-x86_64/codex.exe")))[-1]
+    import shutil
+    exe = shutil.which("codex") or sorted(glob.glob(os.path.expanduser("~/.vscode/extensions/openai.chatgpt-*/bin/*/codex*")))[-1]
     ziel = Path(_leer()) / "codex_antwort.txt"
     # ponytail: effort low für alle Codex-Modelle, vergleichbar mit Antworten ohne Denkmodus; Tokens meldet exec nur gesamt
     _, sek = _cli([exe, "exec", "--skip-git-repo-check", "--ephemeral", "--ignore-user-config", "--ignore-rules",

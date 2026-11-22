@@ -755,7 +755,7 @@ qwen2.5:7b;D02;Analyse;1;0.4;fehlt ['e-bike leasing', 'pedelec gebraucht'], zu v
 qwen2.5:7b;D03;Analyse;1;1.0;fehlt [], zu viel [];2.5;13;46.8;"[""e-bike akku"", ""akku laden""]";
 qwen2.5:7b;D04;Analyse;1;0.67;fehlt ['/datenschutz', '/impressum'], zu viel [];2.6;15;43.2;"[""/e-bikes"", ""/e-bikes?page=2""]";
 qwen2.5:7b;D05;Analyse;1;1.0;fehlt [], zu viel [];2.9;31;42.9;"[""/ratgeber/akku-laden"", ""/ratgeber/akku-reichweite"", ""/ratgeber/winterlagerung""]";
-qwen2.5:7b;D06;Analyse;1;0;fehlt ['laut', 'strom', 'wartung'], schon vorhanden genannt ['betriebskosten', 'nachbaukosten', 'montagekosten'];3.3;47;44.3;"[""Energieeffizienzgewinn"", ""Anlagengröße"", ""Montagekosten"", ""Betriebskosten"", ""Nachbaukosten"", ""Technische Leistungsanforderungen""]";
+qwen2.5:7b;D06;Analyse;1;0;fehlt ['laut', 'strom', 'wartung'], schon vorhanden genannt ['montagekosten', 'nachbaukosten', 'betriebskosten'];3.3;47;44.3;"[""Energieeffizienzgewinn"", ""Anlagengröße"", ""Montagekosten"", ""Betriebskosten"", ""Nachbaukosten"", ""Technische Leistungsanforderungen""]";
 qwen2.5:14b;K01;Keywords;1;0.62;falsch: ['bester fahrradhelm', 'decathlon öffnungszeiten koblenz', 'trekkingrad günstig bestellen'];6.9;102;22.4;"{""fahrrad kaufen"":""kommerziell"",""wie pumpe ich einen fahrradreifen auf"":""informational"",""e-bike test 2026"":""informational"",""rose bikes login"":""navigational"",""bester fahrradhelm"":""informational"",""fahrradkette ölen"":""informational"",""decathlon öffnungszeiten koblenz"":""informational"",""trekkingrad günstig bestellen"":""kommerziell""}";
 qwen2.5:14b;K02;Keywords;1;1.0;VERPACKT fehlt [], zu viel [];4.0;39;22.8;"{""brand_keywords"": [""velora e-bike"", ""velora erfahrungen"", ""velra ebike"", ""velora h\u00e4ndler koblenz""]}";
 qwen2.5:14b;K03;Keywords;1;1.0;36/36 Paare richtig;7.9;122;22.1;"{""Energiespeicherung und -gewinnung"": [""photovoltaik speicher"", ""pv anlage einfamilienhaus"", ""solaranlage balkon""], ""Wärmepumpe und Förderung"": [""wärmepumpe kosten"", ""wärmepumpe förderung 2026"", ""wärmepumpe altbau""], ""Dämmung und Förderung"": [""dachdämmung kosten"", ""dämmung zwischensparren"", ""fassadendämmung förderung""]}";
@@ -1947,7 +1947,7 @@ tensorx/deepseek/deepseek-v4-pro-0813;D04;Analyse;1;1.0;fehlt [], zu viel [];0.9
 tensorx/deepseek/deepseek-v4-pro-0813;D05;Analyse;1;1.0;fehlt [], zu viel [];1.3;38;28.3;"```json
 [""/ratgeber/akku-laden"", ""/ratgeber/winterlagerung"", ""/ratgeber/akku-reichweite""]
 ```";
-tensorx/deepseek/deepseek-v4-pro-0813;D06;Analyse;1;0.4;fehlt [], schon vorhanden genannt ['kostenvergleich gas vs. wärmepumpe', 'wartungsintervalle und -kosten', 'fördermöglichkeiten 2026 im detail'];1.5;166;111.0;"```json
+tensorx/deepseek/deepseek-v4-pro-0813;D06;Analyse;1;0.4;fehlt [], schon vorhanden genannt ['wartungsintervalle und -kosten', 'fördermöglichkeiten 2026 im detail', 'kostenvergleich gas vs. wärmepumpe'];1.5;166;111.0;"```json
 [
   ""Lautstärke und Schallschutz"",
   ""Abstandsregeln zum Nachbarn"",
@@ -2231,3 +2231,162 @@ codex/gpt-6.2-sol;D04;Analyse;1;1.0;fehlt [], zu viel [];4.1;0;0.0;"[
 ]";
 codex/gpt-6.2-sol;D05;Analyse;1;1.0;fehlt [], zu viel [];5.3;0;0.0;"[""/ratgeber/akku-laden"",""/ratgeber/winterlagerung"",""/ratgeber/akku-reichweite""]";
 codex/gpt-6.2-sol;D06;Analyse;1;1.0;fehlt [], schon vorhanden genannt [];10.8;0;0.0;"[""Lautstärke und Nachbarabstand"",""Wärmepumpen-Stromtarif"",""Wartung und Lebensdauer""]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;K01;Keywords;1;0.88;falsch: ['decathlon öffnungszeiten koblenz'];5.5;118;41.5;"{""fahrrad kaufen"": ""kommerziell"", ""wie pumpe ich einen fahrradreifen auf"": ""informational"", ""e-bike test 2026"": ""informational"", ""rose bikes login"": ""navigational"", ""bester fahrradhelm"": ""kommerziell"", ""fahrradkette ölen"": ""informational"", ""decathlon öffnungszeiten koblenz"": ""informational"", ""trekkingrad günstig bestellen"": ""transaktional""}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;K02;Keywords;1;1.0;fehlt [], zu viel [];3.6;36;40.2;"[
+  ""velora e-bike"",
+  ""velora erfahrungen"",
+  ""velra ebike"",
+  ""velora händler koblenz""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;K03;Keywords;1;1.0;36/36 Paare richtig;6.0;140;41.6;"{
+  ""Wärmepumpe und Förderung"": [
+    ""wärmepumpe kosten"",
+    ""wärmepumpe förderung 2026"",
+    ""wärmepumpe altbau""
+  ],
+  ""Photovoltaik und Speicher"": [
+    ""photovoltaik speicher"",
+    ""pv anlage einfamilienhaus"",
+    ""solaranlage balkon""
+  ],
+  ""Dämmung und Förderung"": [
+    ""dachdämmung kosten"",
+    ""dämmung zwischensparren"",
+    ""fassadendämmung förderung""
+  ]
+}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;K04;Keywords;1;0.91;falsch: ['welche wärmepumpe'];3.1;22;40.5;^(?:wer|was|wie|warum|wo|welche)\b[^w]*$;
+qwen3:30b-a3b-instruct-2507-q4_K_M;K05;Keywords;1;1.0;"8 eindeutige Anfragen; Qualität manuell prüfen";5.2;106;41.3;"[
+  ""wärmepumpe altbau modernisierung"",
+  ""wärmepumpe altbau kosten"",
+  ""wärmepumpe altbau förderung"",
+  ""wärmepumpe altbau installation"",
+  ""wärmepumpe altbau effizienz"",
+  ""wärmepumpe altbau elektrik"",
+  ""wärmepumpe altbau heizung"",
+  ""wärmepumpe altbau wärmeverlust""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;T01;Snippets;1;0.5;66 Zeichen (Soll 30 bis 60);3.0;19;40.8;e-bike leasing für Arbeitnehmer – Vorteile & Anbieter im Vergleich;
+qwen3:30b-a3b-instruct-2507-q4_K_M;T02;Snippets;1;0.5;133 Zeichen (Soll 140 bis 160);3.4;34;39.6;Entdecke das perfekte Trekkingrad zum Kauf – robust, leicht und ideal für Stadt & Natur. Jetzt vergleichen und günstig online kaufen!;
+qwen3:30b-a3b-instruct-2507-q4_K_M;T03;Snippets;1;0;zu lang: [61];4.2;64;40.7;"[
+  ""Velora Tour 5: Leistungsstarkes E-Bike für lange Touren"",
+  ""Velora Tour 5: Komfortabel unterwegs mit elektrischem Support"",
+  ""Velora Tour 5: Perfekt für Abenteuer und Alltag""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;T04;Snippets;1;1.0;80 Zeichen (Soll 20 bis 125);3.3;29;40.4;Frau fährt graues E-Bike auf Schotterweg an der Mosel, Weinberge im Hintergrund.;
+qwen3:30b-a3b-instruct-2507-q4_K_M;T05;Texte;1;1.0;"8 Überschriften; Qualität manuell prüfen";6.4;159;41.3;"[
+  ""Was ist eine Wärmepumpe für den Altbau?"",
+  ""Vorteile einer Wärmepumpe im Altbau"",
+  ""Typen von Wärmepumpen für Altbauten"",
+  ""Energieeffizienz und Förderungen für Wärmepumpen im Altbau"",
+  ""Wichtige technische Voraussetzungen im Altbau"",
+  ""Planung und Installation: Schritte für den Altbaubesitzer"",
+  ""Häufige Fehler bei der Wärmepumpeninstallation im Altbaubereich"",
+  ""Tipps zur optimalen Nutzung und Wartung der Wärmepumpe im Altbaubereich""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;T06;Texte;1;0.67;303 Zeichen, 2 Sätze, Kernaussage 55 Grad True;5.1;98;41.0;Eine Wärmepumpe funktioniert auch im Altbau effizient, wenn die Vorlauftemperatur unter 55 °C bleibt – entscheidend sind große Heizkörper, Flächenheizung und hydraulischer Abgleich. Eine Heizlastberechnung vor der Entscheidung und gezielte Maßnahmen wie Dämmung oder Heizkörperaustausch reichen oft aus.;
+qwen3:30b-a3b-instruct-2507-q4_K_M;T07;Texte;1;1.0;Antwort {'stuffing': True, 'keyword': 'E-Bike kaufen'};3.1;16;39.3;"{""stuffing"": true, ""keyword"": ""E-Bike kaufen""}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;T08;Texte;1;1.0;"Title 35, Description 73 Zeichen; Wirkung manuell prüfen";3.9;47;40.4;"{""title"": ""Effiziente Wärmepumpen von Fachmann"", ""description"": ""Hochwertige Wärmepumpen mit Garantie. Jetzt Angebot anfordern und sparen!""}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;T09;Texte;1;1.0;3 Einträge;5.8;126;41.1;"[{""frage"": ""Wie lange hält ein E-Bike-Akku?"", ""antwort"": ""Meist 800 bis 1000 Ladezyklen, also 3 bis 5 Jahre.""}, {""frage"": ""Darf ich den Akku im Winter draußen lassen?"", ""antwort"": ""Nein, lagern Sie ihn bei 10 bis 20 Grad.""}, {""frage"": ""Muss ich den Akku vor dem ersten Laden leer fahren?"", ""antwort"": ""Nein, Lithium-Akkus haben keinen Memory-Effekt.""}]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;T10;Texte;1;1.0;fehlt [], zu viel [];3.7;42;40.2;"[
+  ""Velora"",
+  ""Tour 5"",
+  ""Eurobike"",
+  ""Frankfurt"",
+  ""Bosch"",
+  ""Koblenz"",
+  ""ADAC""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X01;Technik;1;0.75;fehlt [], zu viel ['/blog/warenkorb-tipps', '/e-bikes?farbe=rot'];3.9;51;39.7;"[
+  ""/warenkorb/schritt-1"",
+  ""/e-bikes?sort=preis"",
+  ""/e-bikes?farbe=rot"",
+  ""/intern/team"",
+  ""/blog/warenkorb-tipps""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X02;Technik;1;0.8;fehlt [], zu viel ['pt-br'];3.1;21;39.9;"[""en-UK"", ""ch-de"", ""es-419"", ""pt-br""]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X03;Technik;1;0.5;falsch: ['hops'];3.1;17;40.8;"{""hops"": 3, ""ersetzen"": 302}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X04;Technik;1;1.0;Antwort 410.0 (410 richtig, 404 halb);2.6;4;48.0;410;
+qwen3:30b-a3b-instruct-2507-q4_K_M;X05;Technik;1;1.0;fehlt [], zu viel [];3.6;37;39.7;"[
+  ""/e-bikes/alt"",
+  ""/suche?q=akku"",
+  ""/ratgeber/akku"",
+  ""/aktion-2024""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X06;Technik;1;0.0;0 Treffer, Antwort ['a', 'b', 'e'];2.9;10;41.9;"[""A"", ""B"", ""E""]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X07;Technik;1;1.0;Prüfpunkte [True, True, True, True];5.9;137;41.5;"{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""FAQPage"",
+  ""mainEntity"": [
+    {
+      ""@type"": ""Question"",
+      ""name"": ""Wie lange hält ein E-Bike-Akku?"",
+      ""acceptedAnswer"": {
+        ""@type"": ""Answer"",
+        ""text"": ""3 bis 5 Jahre.""
+      }
+    },
+    {
+      ""@type"": ""Question"",
+      ""name"": ""Kann man den Akku nachrüsten?"",
+      ""acceptedAnswer"": {
+        ""@type"": ""Answer"",
+        ""text"": ""Ja, beim Fachhändler.""
+      }
+    }
+  ]
+}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;X08;Technik;1;1.0;Prüfpunkte [True, True, True, True];6.3;152;41.2;"{
+  ""@context"": ""https://schema.org"",
+  ""@type"": ""BreadcrumbList"",
+  ""itemListElement"": [
+    {
+      ""@type"": ""ListItem"",
+      ""position"": 1,
+      ""name"": ""Startseite"",
+      ""item"": ""https://velora.example/""
+    },
+    {
+      ""@type"": ""ListItem"",
+      ""position"": 2,
+      ""name"": ""E-Bikes"",
+      ""item"": ""https://velora.example/e-bikes/""
+    },
+    {
+      ""@type"": ""ListItem"",
+      ""position"": 3,
+      ""name"": ""Trekking"",
+      ""item"": ""https://velora.example/e-bikes/trekking/""
+    }
+  ]
+}";
+qwen3:30b-a3b-instruct-2507-q4_K_M;D01;Analyse;1;0.0;Antwort 1440.0, Soll 704;2.7;5;45.8;1440;
+qwen3:30b-a3b-instruct-2507-q4_K_M;D02;Analyse;1;0.5;fehlt ['e-bike leasing'], zu viel ['e-bike akku laden', 'e-bike versicherung', 'fahrradhelm test'];4.0;46;40.6;"[
+  ""trekkingrad"",
+  ""e-bike akku laden"",
+  ""fahrradhelm test"",
+  ""e-bike versicherung"",
+  ""pedelec gebraucht""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;D03;Analyse;1;1.0;fehlt [], zu viel [];3.2;17;40.0;"[
+  ""e-bike akku"",
+  ""akku laden""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;D04;Analyse;1;0.67;fehlt ['/datenschutz', '/impressum'], zu viel [];3.8;46;40.0;"[{""url"": ""/e-bikes"", ""title"": ""E-Bikes kaufen | Velora""}, {""url"": ""/e-bikes?page=2"", ""title"": ""E-Bikes kaufen | Velora""}]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;D05;Analyse;1;1.0;fehlt [], zu viel [];3.5;35;41.1;"[
+  ""/ratgeber/akku-laden"",
+  ""/ratgeber/winterlagerung"",
+  ""/ratgeber/akku-reichweite""
+]";
+qwen3:30b-a3b-instruct-2507-q4_K_M;D06;Analyse;1;0;fehlt ['laut', 'strom', 'wartung'], schon vorhanden genannt ['installation und montagekosten', 'kosten für wärmepumpen-heizungssysteme inkl. speicher'];6.6;165;42.4;"[
+  ""Installation und Montagekosten"",
+  ""Unterschiede zwischen Luft-, Wasser- und Erdwärmpumpen"",
+  ""Energieeffizienz und Jahresarbeitszahl (JAZ)"",
+  ""Heizungsmodernisierung mit Wärmepumpe"",
+  ""Integration in bestehende Heizungsanlagen"",
+  ""Kosten für Wärmepumpen-Heizungssysteme inkl. Speicher"",
+  ""Einsparpotenzial durch Wärmepumpe"",
+  ""Wärmepumpe und Solarthermie kombinieren"",
+  ""Gebäudeisolierung im Zusammenhang mit Wärmepumpen"",
+  ""Zukunftssicherheit und Technologieentwicklung""
+]";
